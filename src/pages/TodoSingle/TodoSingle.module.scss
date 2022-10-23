@@ -1,0 +1,19 @@
+.main {
+    .carte{
+        // something that looks like a pokemon card
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        width:400px;
+        height:800px;
+        margin: 12px;
+        text-align: center;
+    }
+
+    .test{
+        margin: 1em 0;
+        font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+        font-weight: 300;
+        width: 100%;
+    }
+}
