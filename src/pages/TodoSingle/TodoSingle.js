@@ -54,7 +54,7 @@ function TodoSingle() {
             <div className={styles.carte}>
             <button onClick={ChangePokemon}>+1</button>
                 <Title text={poke.name}  />
-                <img src={poke.sprites.front_default} alt={poke.name} />  
+                <img className={styles.pictureCard} src={poke.sprites.front_default} alt={poke.name} />  
                 <p>Height: {poke.height}</p>
                 <p>Weight: {poke.weight}</p>
                 <p>Base experience: {poke.base_experience}</p>
@@ -62,7 +62,7 @@ function TodoSingle() {
                     <p className={styles.test}>{ability.ability.name}</p>
                 ))}
                 <p>types:</p> {poke.types.map(type => (
-                    <p className={styles.test}>{type.type.name}</p>
+                    <p className={styles.types}>{type.type.name}</p>
                 ))}
                 <p>stats:</p> {poke.stats.map(stat => (
                     <p className={styles.test}>{stat.stat.name} : {stat.base_stat}</p>
