@@ -53,19 +53,30 @@ function TodoSingle() {
         <div className={styles.main}>
             <div className={styles.carte}>
             <button onClick={ChangePokemon}>+1</button>
-                <Title text={poke.name}  />
+            <Title text={poke.name}  />
+            <div className={styles.ellipse}></div>
                 <img className={styles.pictureCard} src={poke.sprites.front_default} alt={poke.name} />  
-                <p>Height: {poke.height}</p>
-                <p>Weight: {poke.weight}</p>
-                <p>Base experience: {poke.base_experience}</p>
+                <p>Height: </p><p className={styles.test}>{poke.height}</p>
+                <p>Weight: </p><p className={styles.test}>{poke.weight}</p>
                 <p>abilities:</p> {poke.abilities.map(ability => (
                     <p className={styles.test}>{ability.ability.name}</p>
                 ))}
                 <p>types:</p> {poke.types.map(type => (
-                    <p className={styles.types}>{type.type.name}</p>
-                ))}
-                <p>stats:</p> {poke.stats.map(stat => (
-                    <p className={styles.test}>{stat.stat.name} : {stat.base_stat}</p>
+                    <p className={styles.test}>{ 
+                        type.type.name == "bug" ? <img src="https://www.flaticon.com/svg/static/icons/svg/3033/3033446.svg" alt="bug" /> :
+                        type.type.name == "flying" ? <img src="https://www.flaticon.com/svg/static/icons/svg/3033/3033446.svg" alt="flying" /> : 
+                        type.type.name == "poison" ? <img src="https://www.flaticon.com/svg/static/icons/svg/3033/3033446.svg" alt="poison" /> : 
+                        type.type.name == "grass" ? <img src="https://www.flaticon.com/svg/static/icons/svg/3033/3033446.svg" alt="grass" /> : 
+                        type.type.name == "normal" ? <img src="https://www.flaticon.com/svg/static/icons/svg/3033/3033446.svg" alt="normal" /> : 
+                        type.type.name == "water" ? <img src="https://www.flaticon.com/svg/static/icons/svg/3033/3033446.svg" alt="water" /> : 
+                        type.type.name == "electric" ? <img src="https://www.flaticon.com/svg/static/icons/svg/3033/3033446.svg" alt="electric" /> : 
+                        type.type.name == "ground" ? <img src="https://www.flaticon.com/svg/static/icons/svg/3033/3033446.svg" alt="ground" /> : 
+                        type.type.name == "fairy" ? <img src="https://www.flaticon.com/svg/static/icons/svg/3033/3033446.svg" alt="fairy" /> : 
+                        type.type.name == "fighting" ? <img src="https://www.flaticon.com/svg/static/icons/svg/3033/3033446.svg" alt="fighting" /> : 
+                        type.type.name == "psychic" ? <img src="https://www.flaticon.com/svg/static/icons/svg/3033/3033446.svg" alt="psychic" /> : 
+                        type.type.name == "rock" ? <img src="https://www.flaticon.com/svg/static/icons/svg/3033/3033446.svg" alt="rock" /> : 
+                        type.type.name == "steel" ? <img src="https://www.flaticon.com/svg/static/icons/svg/3033/3033446.svg" alt="steel" /> : 
+                        type.type.name }</p>
                 ))}
             </div>
         </div>
